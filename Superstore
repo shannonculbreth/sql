@@ -41,8 +41,8 @@ SELECT sum(stock_quantity), item_name
 FROM superstore
 WHERE category="Kitchen Supplies";
 
-#Come up with your own question about the data and try to answer it using SQL; What do we have in stock for each item based on average ratings?.
-SELECT sum(stock_quantity), item_name, average_rating
+#Come up with your own question about the data and try to answer it using SQL; Which item has the highest rating?
+SELECT item_name, average_rating
 FROM superstore
 GROUP BY item_name
 ORDER BY average_rating DESC;
